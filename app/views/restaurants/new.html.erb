@@ -1,0 +1,27 @@
+<%= form_for(@restaurant) do |f| %>
+	<p>
+		<%= f.label "name"  %>
+		<%= f.text_field "name" %>
+	</p>
+	<p>
+		<%= f.label "location"  %>
+		<%= f.text_field "location" %>
+	</p>
+	<p>
+		<%= f.label "cuisine"  %>
+		<%= f.text_field "cuisine" %>
+	</p>
+	<p>
+		<%= f.label "menu"  %>
+		<%= f.text_field "menu" %>
+	</p>
+	<p>
+		<%= f.label "open_time", "Opening Time"  %>
+		<%= f.text_field "open_time" %>
+	</p>
+	<p>
+		<%= f.label "close_time", "Closing Time"  %>
+		<%= f.text_field "close_time" %>
+	</p>
+	<%= f.submit "Add Restaurant"%>
+<% end %>
