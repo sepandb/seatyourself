@@ -1,2 +1,13 @@
-<h1>Reservations#index</h1>
-<p>Find me in app/views/reservations/index.html.erb</p>
+<h1> Reservations</h1>
+<table>
+<th class="rows">Restaurant</th>
+<th class="rows">Date</th>
+<th class="rows">Time</th>
+<% @reservations.each do |reservation| %>
+<tr>
+	<td class="rows"><%= reservation.restaurant.name %></td>
+	<td class="rows"><%= reservation.date %></td>
+	<td class="rows"><%= reservation.time %></td>
+</tr>
+<% end %>
+</table>

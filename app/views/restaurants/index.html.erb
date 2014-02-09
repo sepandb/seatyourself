@@ -8,14 +8,12 @@ Add a <%= link_to "new restaurant", new_restaurant_path %>
 	<th>Name</th>
 	<th>Location</th>
 	<th>Cuisine</th>
-	<th>Menu</th>
 </tr>
 <% @restaurants.each do |restaurant| %>
 <tr>
 	<td><%= link_to restaurant.name, restaurant_path(restaurant.id) %></td>
 	<td><%= restaurant.location %></td>
 	<td><%= restaurant.cuisine %></td>
-	<td><%= restaurant.menu %></td>
 </tr>
 </tr>
 <% end %>

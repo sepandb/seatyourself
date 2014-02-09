@@ -1,2 +1,7 @@
-<%= @restaurant.name %>
-<%= @restaurant.open_time %>
+<%= @restaurant.name %></br>
+<%= @restaurant.open_time %></br>
+
+<%= link_to "Make Reservation", new_reservation_path(params[:id]) %>
+
+<h2>Menu</h2>
+<%= @restaurant.menu %>
