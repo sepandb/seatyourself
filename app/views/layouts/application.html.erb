@@ -6,6 +6,9 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+<%= link_to "All Restaurants", restaurants_path %> | <%= link_to "Users", users_path %>
+</header>
 <body>
 
 <%= yield %>

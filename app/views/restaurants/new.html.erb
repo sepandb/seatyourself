@@ -13,15 +13,15 @@
 	</p>
 	<p>
 		<%= f.label "menu"  %>
-		<%= f.text_field "menu" %>
+		<%= f.text_area "menu" %>
 	</p>
 	<p>
 		<%= f.label "open_time", "Opening Time"  %>
-		<%= f.text_field "open_time" %>
+		<%= f.time_select "open_time" %>
 	</p>
 	<p>
 		<%= f.label "close_time", "Closing Time"  %>
-		<%= f.text_field "close_time" %>
+		<%= f.time_select "close_time" %>
 	</p>
 	<%= f.submit "Add Restaurant"%>
 <% end %>
