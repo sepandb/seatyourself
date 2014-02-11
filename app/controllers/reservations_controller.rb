@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
   def index
   	 @reservations = Reservation.all
+     @user = current_user
   end
 
   def new
@@ -20,10 +21,10 @@ class ReservationsController < ApplicationController
   	end
   end
 
+
   private
+
   def reservation_params
   	params.require(:reservation).permit(:date, :time, :restaurant_id)
   end
-
-
 end

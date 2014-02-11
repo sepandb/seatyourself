@@ -1,6 +1,8 @@
 <h1>Restaurants</h1>
 
-Add a <%= link_to "new restaurant", new_restaurant_path %>
+<% if current_user != nil && current_user.admin? %>
+	Add a <%= link_to "new restaurant", new_restaurant_path %>
+<% end %>
 <h3>Here are all the restuarants:</h3>
 <div class="center">
 <table>

@@ -8,6 +8,9 @@
 </head>
 <header>
 <% if current_user  %>
+	<% if current_user.admin? %>
+	<strong>ADMIN</strong>
+	<% end %>
 	Logged in as <%= current_user.email %>
 	<%= link_to "Logout", session_path("current"), :method => :delete %>
 <% else %>

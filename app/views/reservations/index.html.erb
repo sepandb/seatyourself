@@ -1,9 +1,9 @@
-<h1> Reservations</h1>
+<h1>My Reservations</h1>
 <table>
 <th class="rows">Restaurant</th>
 <th class="rows">Date</th>
 <th class="rows">Time</th>
-<% @reservations.each do |reservation| %>
+<% @user.reservations.each do |reservation| %>
 <tr>
 	<td class="rows"><%= reservation.restaurant.name %></td>
 	<td class="rows"><%= reservation.date %></td>
