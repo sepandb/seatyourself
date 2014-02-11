@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-  	@reservations = Reservation.all
+  	 @reservations = Reservation.all
   end
 
   def new
@@ -10,6 +10,7 @@ class ReservationsController < ApplicationController
 
   def create
   	@reservation = Reservation.new(reservation_params)
+    @reservation.user = current_user
   	@restaurant = Restaurant.find(params[:reservation][:restaurant_id])
   	if @reservation.valid?
   		@reservation.save
@@ -23,5 +24,6 @@ class ReservationsController < ApplicationController
   def reservation_params
   	params.require(:reservation).permit(:date, :time, :restaurant_id)
   end
+
 
 end
